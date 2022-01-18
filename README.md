@@ -10,9 +10,8 @@ Useful tips and snippets for Ebiten.
 - [Quick start](#quick-start)
 
 ### Keyboard and mouse
-[back](#contents)
 
-<a href="https://github.com/sedyh/ebiten-cheatsheet/blob/main/contents"><img src="https://user-images.githubusercontent.com/19890545/150034365-6561ab71-5cb4-466f-996c-ae4204ef7c12.png" alt="back" title="back" width="16px"/></a>
+<a href="#contents"><img src="https://user-images.githubusercontent.com/19890545/150034365-6561ab71-5cb4-466f-996c-ae4204ef7c12.png" alt="back" title="back" width="16px"/></a>
 *Keystroke detection and mouse tracking every frame.*
 
 ```go
