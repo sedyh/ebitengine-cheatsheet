@@ -36,7 +36,7 @@ if inpututil.IsMouseButtonJustReleased(ebiten.MouseButtonLeft) {
 ```
 
 ### Center text
-<a href="https://github.com/sedyh/ebiten-cheatsheet/blob/main/contents"><img src="https://user-images.githubusercontent.com/19890545/150034365-6561ab71-5cb4-466f-996c-ae4204ef7c12.png" alt="back" title="back" width="16px"/></a>
+<a href="#contents"><img src="https://user-images.githubusercontent.com/19890545/150034365-6561ab71-5cb4-466f-996c-ae4204ef7c12.png" alt="back" title="back" width="16px"/></a>
 *Subtract the minimum point and add half the size.*
 ```go
 func DrawCenteredText(screen *ebiten.Image, font font.Face, s string, cx, cy int) {
@@ -48,7 +48,7 @@ func DrawCenteredText(screen *ebiten.Image, font font.Face, s string, cx, cy int
 
 
 ### Flip Image
-<a href="https://github.com/sedyh/ebiten-cheatsheet/blob/main/contents"><img src="https://user-images.githubusercontent.com/19890545/150034365-6561ab71-5cb4-466f-996c-ae4204ef7c12.png" alt="back" title="back" width="16px"/></a>
+<a href="#contents"><img src="https://user-images.githubusercontent.com/19890545/150034365-6561ab71-5cb4-466f-996c-ae4204ef7c12.png" alt="back" title="back" width="16px"/></a>
 *Scale the image in the opposite direction by its size, and then move it into place.*
 ```go
 func FlipHorizontal(source *ebiten.Image) *ebiten.Image {
@@ -69,7 +69,7 @@ func FlipVertical(source *ebiten.Image) *ebiten.Image {
 ```
 
 ### Quick start
-<a href="https://github.com/sedyh/ebiten-cheatsheet/blob/main/contents"><img src="https://user-images.githubusercontent.com/19890545/150034365-6561ab71-5cb4-466f-996c-ae4204ef7c12.png" alt="back" title="back" width="16px"/></a>
+<a href="#contents"><img src="https://user-images.githubusercontent.com/19890545/150034365-6561ab71-5cb4-466f-996c-ae4204ef7c12.png" alt="back" title="back" width="16px"/></a>
 *Minimal game, vsync and resize are usually always helpful when debugging.*
 
 ```go
