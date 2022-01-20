@@ -4,40 +4,26 @@ Useful tips and snippets for Ebiten.
 
 ### Contents
 
-- [Keyboard and mouse](#keyboard-and-mouse)
+- [Relative crop](#relative-crop)
 - [Center text](#center-text)
 - [Flip Image](#flip-image)
 - [Quick start](#quick-start)
 
-### Keyboard and mouse
+### Relative Crop
 
 <a href="#contents"><img src="https://user-images.githubusercontent.com/19890545/150034365-6561ab71-5cb4-466f-996c-ae4204ef7c12.png" alt="back" title="back" width="16px"/></a>
-*Keystroke detection and mouse tracking every frame.*
+*If you try to make a sub image from another sub image, you may run into unusual behavior due to the fact that absolute coordinates are used for each crop, instead you can use this function so as not to constantly remember this nuance.*
 
 ```go
-if ebiten.IsKeyPressed(ebiten.KeySpace) {
-	// Space is pressed now
-}
-if inpututil.IsKeyJustPressed(ebiten.KeySpace) {
-	// Space was pressed this frame
-}
-if inpututil.IsKeyJustReleased(ebiten.KeySpace) {
-	// Space was released this frame
-}
-if ebiten.IsMouseButtonPressed(ebiten.MouseButtonLeft) {
-	// Left mouse button is pressed now
-}
-if inpututil.IsMouseButtonJustPressed(ebiten.MouseButtonLeft) {
-	// Left mouse button was pressed this frame
-}
-if inpututil.IsMouseButtonJustReleased(ebiten.MouseButtonLeft) {
-	// Left mouse button was released this frame
+func RelativeCrop(source *ebiten.Image, r image.Rectangle) *ebiten.Image {
+	rx, ry := source.Bounds().Min.X+r.Min.X, source.Bounds().Min.Y+r.Min.Y
+	return source.SubImage(image.Rect(rx, ry, rx+r.Max.X, ry+r.Max.Y)).(*ebiten.Image)
 }
 ```
 
 ### Center text
 <a href="#contents"><img src="https://user-images.githubusercontent.com/19890545/150034365-6561ab71-5cb4-466f-996c-ae4204ef7c12.png" alt="back" title="back" width="16px"/></a>
-*Subtract the minimum point and add half the size.*
+*Text bounds behave differently than image bounds. To calculate center point you will need to subtract the minimum point and add half the size.*
 ```go
 func DrawCenteredText(screen *ebiten.Image, font font.Face, s string, cx, cy int) {
     bounds := text.BoundString(font, s)
