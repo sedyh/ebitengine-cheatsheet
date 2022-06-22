@@ -1,6 +1,6 @@
-# <img align="right" src="https://user-images.githubusercontent.com/19890545/150032502-2b114fdd-ca41-4b5d-9e01-a567f737aa2d.png" alt="ebiten-cheatsheet" title="ebiten-cheatsheet" /> Ebiten Cheatsheet
+# <img align="right" src="https://user-images.githubusercontent.com/19890545/150032502-2b114fdd-ca41-4b5d-9e01-a567f737aa2d.png" alt="ebiten-cheatsheet" title="ebiten-cheatsheet" /> Ebitengine Cheatsheet
 
-Useful tips and snippets for Ebiten.
+Useful tips and snippets for Ebitengine.
 
 ### Contents
 
