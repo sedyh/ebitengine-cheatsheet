@@ -60,8 +60,8 @@ func FlipVertical(source *ebiten.Image) *ebiten.Image {
 
 ```go
 func main() {
+	ebiten.SetVsyncEnabled(true)
 	ebiten.SetWindowResizingMode(ebiten.WindowResizingModeEnabled)
-	ebiten.SetFPSMode(ebiten.FPSModeVsyncOffMaximum)
 	if err := ebiten.RunGame(NewGame()); err != nil {
 		log.Fatal(err)
 	}
